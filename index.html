@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon México</title>
+<!--Luna Arias Meredith Aranza — 5-I — 0589 -->
+<style>
+  body { 
+  font-family: Arial, 
+  sans-serif; margin: 0; 
+  background: #f3f3f3; 
+  color: #222; }
+
+  header { background: #131921; 
+  color: white; 
+  padding: 15px 20px; 
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  flex-wrap: wrap; }
+
+  header h1 { margin: 0; 
+  font-size: 24px; }
+
+  header input { flex: 1; 
+  padding: 8px; 
+  border: none; 
+  border-radius: 4px; 
+  min-width: 150px; }
+
+  nav { background: #232f3e; padding: 10px 20px; }
+  nav a { color: white; text-decoration: none; margin-right: 20px; }
+  nav a:hover { color: #fda7f6; }
+
+  main { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
+
+  .banner { background: #fab0f0; text-align: center; padding: 30px; border-radius: 6px; }
+
+  .productos { display: flex; flex-wrap: wrap; gap: 15px; margin: 15px 0 30px; }
+  .producto { background: white; width: 200px; padding: 15px; text-align: center; border-radius: 6px; }
+  .imagen { font-size: 60px; }
+  .precio { font-weight: bold; color: #eb75d7; }
+  button { background: #faa5e1; border: none; padding: 8px 14px; border-radius: 15px; cursor: pointer; }
+
+  form { background: white; padding: 20px; max-width: 400px; border-radius: 6px; margin: 15px auto 30px; }
+  form label { display: block; margin-top: 10px; }
+  form input, form select, form textarea { width: 100%; padding: 7px; margin-top: 4px; box-sizing: border-box; }
+  form button { margin-top: 15px; width: 100%; }
+
+  footer { background: #232f3e; color: white; text-align: center; padding: 20px; }
+  footer a { color: white; margin: 0 8px; }
+
+  .producto img { object-fit: cover; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Amazon (˶>⩊<˶)</h1>
+  <!--Aquí utilice un placeholder para poder simular un buscador "funcional" (que no funciona)-->
+  <input type="text" placeholder="Buscar productos...">
+  <span> Carrito (0)</span>
+</header>
+
+<!--La barra de navegación, solo el apartado de contacto se hace referencia dentro del mismo documento.-->
+<nav>
+  <a href="">Inicio</a>
+  <a href="">Productos</a>
+  <a href="">Ofertas</a>
+  <a href="#contacto">Contacto (๑>◡<๑)</a>
+</nav>
+
+<!--Aquí tengo mi contenedor principal, donde almaceno mis 2 secciones, productos del día y las ofertas.-->
+<main id="inicio">
+  <section class="banner">
+    <h2>¡Ofertas de temporada! ₍₍⚞(˶ˆᗜˆ˵)⚟⁾⁾ </h2>
+    <p>Envío gratis en compras mayores a $6767 ദ്ദി◝ ⩊ ◜.ᐟ </p>
+  </section>
+<!--Aquí almaceno los productos que vendo mediante divisiones sencillas que se transforman en tarjetas gracias a la magia del CSS.-->
+  <section id="productos">
+    <h2>Productos destacados ( •̯́ ₃ •̯̀)</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="libros.jpg" width="170" height="170"">
+        <p>Libros — Mangas</p>
+        <p class="precio">$999</p>
+        <button>Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="dojacat.jpg" width="170" height="170">
+        <p>Discos y Vinilos</p>
+        <p class="precio">$9,299</p>
+        <button>Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="zapatos.jpg "width="170" height="170"">
+        <p>Zapatillas</p>
+        <p class="precio">$850</p>
+        <button>Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="figuras.jpg"  width="170" ">
+        <p>Figuras</p>
+        <p class="precio">$420</p>
+        <button>Agregar</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="ofertas">
+    <h2>Ofertas del día ꉂ(˵˃ ᗜ ˂˵)</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="iphone18.jpg" width="170" height="170">
+        <p>Iphone 18</p>
+        <p class="precio">365 pagos semanales de $15 mil pesos :꣓</p>
+        <button>Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="lenobo.jpg" width="170" height="170" >
+        <p>Laptop Lenovo ChromeBook</p>
+        <p class="precio">$8,500,000</p>
+        <button>Agregar</button>
+      </div>
+    </div>
+  </section>
+
+  <!--Aquí tengo mi formulario, yo escogí uno de selección, como una encuesta popular que realizan las empresas
+  antes de que inicies sesión en un sitio y poder conocer lo que te gustaría comprar.-->
+  <section id="contacto">
+    <h2 style="text-align:center;">Contáctanos (๑>؂•̀๑)</h2>
+    <form action="" method="post">
+      <label for="nombre">Nombre de Usuario:</label>
+      <input type="text" id="nombre" required>
+      <!--Use un label para que el recuadro de mi input fuera más visible, label genera un recuadro adaptado a cierta id-->
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" required>
+
+      <label for="producto">Producto de interés:</label>
+      <!--Aquí tengo mis opciones, las cuales pueden ser escogidas mediante una tabla desplegable.-->
+      <select id="producto">
+        <option>Libros</option>
+        <option>Discos</option>
+        <option>Zapatos</option>
+        <option>Figuras</option>
+        <option>Otro</option>
+      </select>
+      <!--Mi botón para enviar el formulario y para reiniciarlo, aunque no está ligado a nada. -->
+      <button type="submit">Enviar</button>
+      <button type="reset"> Borrar </button>
+    </form>
+  </section>
+</main>
+
+<footer>
+</footer>
+<p style="text-align: center;"> Meredith Aranza Luna Arias — 5-I <br> 0589 — Programación (ദ്ദി˙ᗜ˙) </p>
+
+</body>
+</html>
