@@ -129,7 +129,7 @@
   <!--Aquí tengo mi formulario, yo escogí uno de selección, como una encuesta popular que realizan las empresas
   antes de que inicies sesión en un sitio y poder conocer lo que te gustaría comprar.-->
   <section id="contacto">
-    <h2 style="text-align:center;">Contáctanos (๑>؂•̀๑)</h2>
+    <h2 style="text-align:center;">Inicio de Sesión(๑>؂•̀๑)</h2>
     <form action="" method="post">
       <label for="nombre">Nombre de Usuario:</label>
       <input type="text" id="nombre" required>
@@ -137,16 +137,29 @@
       <label for="correo">Correo electrónico:</label>
       <input type="email" id="correo" required>
 
-      <label for="producto">Producto de interés:</label>
-      <!--Aquí tengo mis opciones, las cuales pueden ser escogidas mediante una tabla desplegable.-->
-      <select id="producto">
-        <option>Libros</option>
-        <option>Discos</option>
-        <option>Zapatos</option>
-        <option>Figuras</option>
-        <option>Otro</option>
-      </select>
+      <label for="producto">Contraseña:</label>
+      <input type="password" name="pass"> 
+
+
       <!--Mi botón para enviar el formulario y para reiniciarlo, aunque no está ligado a nada. -->
+      <button type="submit">Enviar</button>
+      <button type="reset"> Borrar </button>
+    </form>
+  </section>
+
+    <section id="contacto" align="right" >
+    <h2 style="text-align:center;">Registro(๑>؂•̀๑)</h2>
+    <form action="" method="post">
+      <label for="nombre">Nombre de Usuario:</label>
+      <input type="text" id="nombre" required>
+      <!--Use un label para que el recuadro de mi input fuera más visible, label genera un recuadro adaptado a cierta id-->
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" required>
+
+      <label for="producto">Contraseña:</label>
+      <input type="password" name="pass"> 
+      <label for="pass">Confirmar contraseña: </label>
+      <input type="password" name="pass"> 
       <button type="submit">Enviar</button>
       <button type="reset"> Borrar </button>
     </form>
